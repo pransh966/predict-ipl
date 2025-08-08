@@ -6,7 +6,7 @@ from sklearn.compose import ColumnTransformer
 import sklearn
 from sklearn.compose import ColumnTransformer
 
-# now this name exists and you can patch if you really must
+
 import sklearn.compose._column_transformer as _ct
 _ct._RemainderColsList = list
 
@@ -50,7 +50,7 @@ with col4:
 with col5:
     wickets_fallen = st.number_input('Enter Wickets Fallen', min_value=0, max_value=10)
 
-# 👉 Make sure this is the only place where prediction logic happens
+
 if st.button('Predict Probability'):
     runs_left = target - score
     balls_left = 120 - int(over_completed * 6)
@@ -79,6 +79,4 @@ if st.button('Predict Probability'):
 
 
 
-    # Optional: Use your model to predict
-    # result = pipe.predict_proba(input_df)[0]
-    # st.success(f"Win Probability: {round(result[1]*100, 2)}%")
+
