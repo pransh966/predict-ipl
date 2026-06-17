@@ -2,21 +2,6 @@ import streamlit as st
 import pickle
 import pandas as pd
 
-from sklearn.compose import ColumnTransformer
-import sklearn
-from sklearn.compose import ColumnTransformer
-
-
-import sklearn.compose._column_transformer as _ct
-_ct._RemainderColsList = list
-
-
-
-
-from pandas.io.sas.sas_constants import os_version_number_length
-
-sklearn.compose._column_transformer._RemainderColsList = list  # Fake the missing class
-
 with open("pipe.pkl", "rb") as f:
     pipe = pickle.load(f)
 
